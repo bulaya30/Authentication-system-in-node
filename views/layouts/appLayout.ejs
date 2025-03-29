@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norrechel</title>
+    <link href="img/logo2.png" rel="icon">
+   <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="d-flex align-items-center justify-content-between logo-container">
+                <a href="/" class="logo d-flex align-items-center">Norrechel</a>
+            </div><!-- End Logo -->
+            <nav class="norrechel-navbar">
+                <ul class="nav__links d-flex align-items-center">
+                    <% if (user) { %>
+                      <li class="nav-item dropdown pe-3"><a href="/profile"><i class="bi bi-question-circle"></i> <%= user.lastName %>  </a></li>
+                      <li class="nav-item dropdown pe-3"><a href="/logout"><i class="bi bi-question-circle"></i> Logout  </a></li>
+                    <% } else { %>
+                      <li class="nav-item dropdown pe-3"><a href="/login"><i class="bi bi-question-circle"></i>   Login</a></li>
+                      <li class="nav-item dropdown pe-3"><a href="/register"><i class="bi bi-cart4"></i>   Sign up</a></li>
+                    <% } %>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+      <%- body %>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        
+        <div class="footer-container copyright">
+          <div class=" text-light p-2">
+            &copy; Copyright <span>Norrechel</span>. All Rights Reserved
+          </div>
+        </div>
+      </footer>
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center copy-right"><i class="bi bi-arrow-up-short"></i></a>
+      <script src="./js/tx.js"></script>
+    </body>
+
+</html>

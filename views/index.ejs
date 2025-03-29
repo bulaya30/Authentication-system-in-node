@@ -1,0 +1,15 @@
+<div id="main-content">
+  <div class="container">
+    <div class="home-content">
+      <% if (user) { %>
+        <h1>Welcome, <%=  user.email %></h1>
+        <p>You are logged in in our system click <a href="/profile">here to update your personal information</a></p>
+      <% } else {%>
+        <h1>Welcome</h1>
+        <p>Please log in to get access in our system</p>
+  
+        <% } %>
+    </div>
+    </div>
+
+</div>

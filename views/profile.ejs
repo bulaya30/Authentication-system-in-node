@@ -1,0 +1,72 @@
+<div id="main-content">
+  <div class="user-container">
+    <div class="user-row">
+      <aside class="user-menu">
+        <h2>Profile</h2>
+        <ul>
+          <li class="user-menu-item"><a href="">Dashboard</a></li>
+          <li class="user-menu-item"><a href="">Notifications</a></li>
+          <li class="user-menu-item"><a href="">Orders</a></li>
+          <li class="user-menu-item"><a href="">Saved</a></li>
+        </ul>
+      </aside>
+      <article class="user-info">
+        <div class="user-row">
+          <div class="user-personal-info">
+            <h2>Personal information</h2>
+            <p><strong>Full name: </strong><span class="user-name"><%= user.firstName %> <%= user.lastName %> </span></p>
+            <p><strong>Contact: </strong><span class="contact"><%= user.contact %> </span></p>
+            <p><strong>Address:</strong><span class="address"><%= user.country %> | <%= user.town %> | <%= user.address %></span></p>
+            <p><strong>E-mail Address:</strong><span class="email"> <%= user.email %></span></p>
+          </div>
+          <div class="user-update">
+            <h2>Update</h2>
+            <div class="user-alert-message danger">User information updated successfully</div>
+            <form id="user-update-form" action="" autocomplete="off">
+              <div class="user-input-box user-input-info">
+                <div class="user-row">
+                  <label for="fname">First Name</label>
+                  <label for="lname">Last Name</label>
+                </div>
+                <div class="user-row">
+                  <input type="text" name="fname" id="fname" value="<%= user.firstName %>">
+                  <input type="text" name="lname" id="lname" value="<%= user.lastName %>">
+                </div>
+              </div>
+              <div class="user-input-box user-input-info">
+                <div class="user-row">
+                  <label for="contact">Contact</label>
+                  <label for="country">Pays</label>
+                </div>
+                <div class="user-row user-input-info">
+                  <input type="text" name="contact" id="contact" value="<%= user.contact %>">
+                  <input type="text" name="country" id="country" value="<%= user.country %>">
+                </div>
+                
+              </div>
+              <div class="user-input-box">
+                <div class="user-row">
+                  <label for="town">Ville</label>
+                  <label for="address">Address</label>
+                </div>
+                <div class="user-row user-input-info">
+                  <input type="text" name="town" id="town" value="<%= user.town %>">
+                  <input type="text" name="address" id="address" value="<%= user.address %>">
+                </div>
+              </div>
+              <div class="user-input-box">
+                <label for="email">E-mail address</label>
+                <input type="email" name="email" id="email" value="<%= user.email %>">
+              </div>
+              <div class="user-input-box user-update-btn">
+                <button type="submit" class="btn">Update</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  </div>
